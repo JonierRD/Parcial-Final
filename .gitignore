@@ -1,0 +1,22 @@
+# Sistema
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/
+
+# Editor
+.vscode/
+*.code-workspace
+
+# Logs
+npm-debug.log*
+
+# OS
+desktop.ini
+
+# Build / assets
+dist/
+
+# Ignore user PDF and large personal files
+*.pdf
