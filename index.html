@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OpticaVista: tienda web de lentes con registro de usuarios y catálogo 2026.">
+  <meta name="keywords" content="óptica, lentes, gafas, monturas, registro">
+  <meta name="author" content="OpticaVista">
+  <title>OpticaVista | Lentes que definen tu estilo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">OpticaVista</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coleccion">Colección</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="usuarios.html" data-route="usuarios.html">Usuarios</a></li>
+          <li class="nav-item ms-lg-2"><button class="btn btn-gold btn-sm" data-bs-toggle="modal" data-bs-target="#registroModal">Registro</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <img src="/img/Lentes1.webp" alt="Lentes negros sobre fondo cálido">
+      <div class="container hero-text">
+        <p class="tag">Colección 2026</p>
+        <h1 class="display-3 title">Lentes que definen tu estilo</h1>
+        <p class="lead">Encuentra monturas elegantes, cómodas y listas para acompañar tu forma de mirar el mundo.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <button id="verColeccionBtn" class="btn btn-gold btn-lg">Ver colección</button>
+          <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#registroModal">Registrarme</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="coleccion" class="section">
+      <div class="container">
+        <p class="tag">Catálogo</p>
+        <h2 class="title">Colección destacada</h2>
+        <p class="muted mb-4">Modelos seleccionados para uso diario, lectura, trabajo y protección solar.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <article class="card product">
+              <img src="/img/Lentes3.webp" alt="Montura negra rectangular">
+              <div class="card-body"><h3>Clásico Rectangular</h3><p>Montura ligera para lectura y trabajo.</p><b>$120.000</b></div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="card product">
+              <img src="/img/Lentes4.webp" alt="Montura rosada moderna">
+              <div class="card-body"><h3>Rose Studio</h3><p>Diseño expresivo con acabado translúcido.</p><b>$145.000</b></div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="card product">
+              <img src="/img/Lentes5.webp" alt="Lentes redondos dorados">
+              <div class="card-body"><h3>Golden Round</h3><p>Marco metálico, sobrio y versátil.</p><b>$160.000</b></div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <article class="card product">
+              <img src="/img/Lentes7.webp" alt="Gafas oscuras de sol">
+              <div class="card-body"><h3>Solar Urban</h3><p>Protección solar con líneas modernas.</p><b>$180.000</b></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="section section-alt">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <p class="tag">Nosotros</p>
+            <h2 class="title">Asesoría visual con estilo y precisión</h2>
+            <p class="muted">OpticaVista reúne monturas cuidadosamente elegidas, atención cercana y una experiencia digital clara para cada usuario.</p>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#registroModal">Crear registro</button>
+          </div>
+          <div class="col-lg-6"><img src="/img/Lentes6.webp" alt="Especialista entregando lentes" class="rounded-img"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex justify-content-between gap-3 flex-wrap">
+      <small>&copy; 2026 OpticaVista</small>
+      <a href="usuarios.html" data-route="usuarios.html">Usuarios registrados</a>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="registroModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h5 modal-title">Registro de cliente</h2>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="registroForm" novalidate>
+          <div class="modal-body">
+            <label class="form-label" for="nombre">Nombre completo</label>
+            <input class="form-control mb-1" id="nombre" autocomplete="name"><div class="invalid-feedback mb-2" id="error-nombre"></div>
+
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input class="form-control mb-1" id="email" type="email" autocomplete="email"><div class="invalid-feedback mb-2" id="error-email"></div>
+
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input class="form-control mb-1" id="telefono" inputmode="numeric" autocomplete="tel"><div class="invalid-feedback mb-2" id="error-telefono"></div>
+
+            <label class="form-label" for="ciudad">Ciudad</label>
+            <input class="form-control mb-1" id="ciudad" autocomplete="address-level2"><div class="invalid-feedback mb-2" id="error-ciudad"></div>
+
+            <label class="form-label" for="contrasena">Contraseña</label>
+            <input class="form-control mb-1" id="contrasena" type="password"><div class="invalid-feedback" id="error-contrasena"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-gold" id="registrarBtn" type="submit">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
